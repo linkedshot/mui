@@ -25,6 +25,7 @@ import { useViewport } from 'hooks/useViewport'
 import { breakpoints } from 'utils/theme'
 import AccountsButton from './AccountsButton'
 import useUnownedAccount from 'hooks/useUnownedAccount'
+import PlatformStatus from './PlatformStatus'
 
 const TopBar = () => {
   const { t } = useTranslation('common')
@@ -75,6 +76,7 @@ const TopBar = () => {
           {connected ? (
             <div className="hidden md:block">
               <SolanaTps />
+              <PlatformStatus />
             </div>
           ) : null}
           <img
