@@ -16,7 +16,6 @@ import useLocalStorageState from '../hooks/useLocalStorageState'
 import CreateAccountModal from './modals/CreateAccountModal'
 import { useRouter } from 'next/router'
 import UserSetupModal from './modals/UserSetupModal'
-import SolanaTps from './SolanaTps'
 import useMangoAccount from 'hooks/useMangoAccount'
 import useOnlineStatus from 'hooks/useOnlineStatus'
 import { abbreviateAddress } from 'utils/formatting'
@@ -75,7 +74,6 @@ const TopBar = () => {
           ) : null}
           {connected ? (
             <div className="hidden md:block">
-              <SolanaTps />
               <PlatformStatus />
             </div>
           ) : null}
